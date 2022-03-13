@@ -1,0 +1,8 @@
+let rec fib n = if n<2 then n else fib(n-1) + fib(n-2)
+
+/fib { dup
+       2 lt
+          { pop dup }
+          { dup 1 sub fib exch 2 sub fib add }
+       ifelse
+     } def
